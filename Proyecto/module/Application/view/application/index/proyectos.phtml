@@ -1,0 +1,22 @@
+<h1><?php echo $this->titulo?></h1>
+ 
+<?php $nombre ="nombre_prueba";
+	foreach ($datos as $dato){?>
+		<?php if ($nombre != $dato["nombre_proyecto"]) {?>
+			<br>
+			<p><b>-Nombre del proyecto: </b><?php echo $dato["nombre_proyecto"]?>
+			<?php if ($dato["estado_proyecto"]== 0) {
+				echo "(cerrado)";
+			}else{
+				echo "(abierto)";
+			}?></p>
+		
+		<?php }?>
+			<b>Trabajador: </b> <?php echo $dato["nombre_trabajador"]." "; echo $dato["apellido_trabajador"]?>
+			<b>Puesto: </b> <?php echo $dato["puesto_trabajador"];
+				$nombre =$dato["nombre_proyecto"];
+				
+			?>
+			<br>
+			
+<?php }?>
